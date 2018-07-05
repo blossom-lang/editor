@@ -1,0 +1,67 @@
+# Features:
+
+  * Create/Edit graphs
+      * Create nodes
+      * Create edges between nodes
+      * Delete nodes
+      * Edit nodes' and edges' labels.
+
+  * Create/Edit programmes
+      * Create rules
+      * Create procs and the rule applications
+
+  * Run programmes
+      * View output graph
+      * Watch the execution (and see possible matches before one is chosen)? 
+          * This might be relatively simple with [Fibres](https://www.rubydoc.info/stdlib/core/1.9.2/Fiber), which are ruby's coroutines (which could be added to the interpreter).
+          * Or perhaps saving of interim graphs (with special marks for matching options, or a matched option), and then you can step forward and back through the execution.
+
+# Input
+
+## Programme
+
+Text box input for procs and rule applications.
+With syntax highlighting, and shows invalid code (missing rule application or proc).
+List of rules needs to be available, and editing rules while seeing code would be useful.
+
+## Graph
+
+Buttons / key commands for creation/deletion/editing.
+Some hidden data for the positioning of the nodes saved with the graph. 
+    Possibly in comments?
+    Possibly in a hidden file alonside the graph file?
+    Possibly in a hidden file referencing the graph file's location?
+If no (or invalid) positioning, then automatically position nodes/edges using some library.
+  * http://graphstream-project.org
+  * https://stackoverflow.com/questions/6162618/java-graph-library-for-dynamic-visualisation
+
+
+# Menu
+
+  * File
+      * New
+          * Graph
+          * Programme
+          * Rule
+      * Open
+          * Graph
+          * Programme
+      * Save
+      * Save As...
+      * Close
+      * Exit
+  * Edit
+      * Undo
+      * Redo
+  * Graph
+      * Add
+          * Node
+          * Edge
+  * Programme
+      * Run
+      * Trace
+  * Help
+      * Documentation
+      * Email
+      * About
+
