@@ -1,4 +1,4 @@
-# Features:
+# Functionality:
 
   * Create/Edit graphs
       * Create nodes
@@ -15,6 +15,10 @@
       * Watch the execution (and see possible matches before one is chosen)? 
           * This might be relatively simple with [Fibres](https://www.rubydoc.info/stdlib/core/1.9.2/Fiber), which are ruby's coroutines (which could be added to the interpreter).
           * Or perhaps saving of interim graphs (with special marks for matching options, or a matched option), and then you can step forward and back through the execution.
+
+  * Display graphs
+      * Positioning of nodes/edges
+      * Colouring/styling of nodes/edges/labels
 
 # Input
 
@@ -34,6 +38,11 @@ Some hidden data for the positioning of the nodes saved with the graph.
 If no (or invalid) positioning, then automatically position nodes/edges using some library.
   * http://graphstream-project.org
   * https://stackoverflow.com/questions/6162618/java-graph-library-for-dynamic-visualisation
+
+# Output
+
+## Graph
+
 
 
 # Menu
