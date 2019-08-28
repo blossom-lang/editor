@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blossom Web Editor v0.1.0</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <span class="brand-logo"><span class="hoverable" contenteditable="true">Untitled Blossom Programme</span></span>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="new"><i class="material-icons left">add</i>New</a></li>
+                        <li><a href="save"><i class="material-icons left">save</i>Save</a></li>
+                        <li><a href="save"><i class="material-icons left">launch</i>Load</a></li>
+                        <li><a href="share"><i class="material-icons left">share</i>Share</a></li>
+                        <li><a class="waves-effect waves-light modal-trigger" href="#modal-help"><i class="material-icons left">help</i>Help</a></li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+
+                        <li class="tab"><a href="#host"><i class="material-icons tiny left">linear_scale</i>Host Graph</a></li>
+                        <li class="tab"><a href="#programme" class="active"><i class="material-icons tiny left">code</i>Programme</a></li>
+                        <li class="tab"><a href="#result"><i class="material-icons tiny left">timeline</i>Result</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+            <section class="tab" id="host">
+                <canvas class="graph"></canvas>
+            </section>
+
+            <section class="tab active" id="programme">
+                <div class="foobar">
+                    <pre class="textual"><code contenteditable="true">rule r1
+end</code></pre>
+                    <div class="visual">
+                        <ul class="collapsible">
+                            <li class="rule-layout">
+                                <div class="collapsible-header">r1</div>
+                                <div class="collapsible-body">
+                                    <canvas class="graph lhs"></canvas>
+                                    <!-- TODO: get this verticall aligned -->
+                                    <span>=></span>
+                                    <canvas class="graph rhs"></canvas>
+                                    <pre class="rule-code condition"><code contenteditable="true"></code></pre>
+                                    <pre class="rule-code addendum"><code contenteditable="true"></code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab" id="result">
+                <nav>
+                    <div class="nav-wrapper">
+                        <ul class="left">
+                            <li><a ><i class="material-icons">fast_rewind</i></a></li>
+                            <li><a ><i class="material-icons">play_arrow</i></a></li>
+                            <li><a ><i class="material-icons">fast_forward</i></a></li>
+                            <li><input type="range" id="test5" min="0" max="100" /></li>
+                            <li><a><i class="material-icons">skip_previous</i></a></li>
+                            <li><a><i class="material-icons">skip_next</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <canvas class="graph"></canvas>
+            </section>
+
+        </main>
+        <footer class="page-footer">
+        </footer>
+        <div id="modal-help" class="modal">
+            <div class="modal-content">
+                <h4>Help</h4>
+                <p>For general help with Blossom, checkout the <a target="_blank" href="">Wiki</a>. Below are the commands for the Blossom Web Editor.</p>
+                <h5>Graph Commands</h5>
+                <table>
+                    <tr>
+                        <td>
+                            Create a Node
+                        </td>
+                        <td>
+                            <kbd>Ctrl</kbd> + <kbd>Left-Click</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Create an Edge
+                        </td>
+                        <td>
+                            <kbd>Ctrl</kbd> + <kbd>Left-Click</kbd> on a Node, and drag to another Node.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Select a Node/Edge
+                        </td>
+                        <td>
+                            <kbd>Left-Click</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Delete a selected Node/Edge
+                        </td>
+                        <td>
+                            <kbd>Delete</kbd> / <kbd>Backspace</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Edit a selected Node/Edge's label
+                        </td>
+                        <td>
+                            <kbd>Enter</kbd> / <kbd>Return</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Undo
+                        </td>
+                        <td>
+                            <kbd>Ctrl</kbd> + <kbd>Z</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Redo
+                        </td>
+                        <td>
+                            <kbd>Ctrl</kbd> + <kbd>Y</kbd>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+        <script type="text/javascript">M.AutoInit();</script>
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
